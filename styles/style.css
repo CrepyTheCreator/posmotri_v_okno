@@ -47,7 +47,6 @@ ol {
 }
 
 .result {
-  min-height: 0;
   margin-top: 78px;
 }
 
@@ -61,12 +60,12 @@ ol {
 .result__video {
   width: 100%;
   height: 100%;
-  object-fit: fill;
+  object-fit: cover;
 }
 
 .search-form {
   display: flex;
-  gap: 40px;
+  gap: 40.5px;
 }
 
 .visually-hidden {
@@ -102,7 +101,6 @@ ol {
   color: inherit;
   font-family: inherit;
   font-size: 18px;
-  letter-spacing: -0.1px;
   background-color: transparent;
 }
 
@@ -115,7 +113,6 @@ ol {
 
 .search-form__textfield:focus-visible {
   padding-right: 0;
-  padding-right: 13;
   outline: 1px solid #fff;
   outline-offset: 1px;
 }
@@ -158,7 +155,7 @@ fieldset {
   border: 1px solid #fff;
   color: #fff;
   font-family: "Fira Sans Condensed", sans-serif;
-  font-weight: inherit;
+  font-weight: 700;
   font-size: 18px;
   background-color: transparent;
 }
@@ -171,6 +168,10 @@ fieldset {
   text-decoration: underline;
 }
 
+.button:focus {
+  outline: none;
+}
+  
 .button:focus-visible { 
   outline: 1px solid #fff;
   outline-offset: 1px;
@@ -184,12 +185,12 @@ fieldset {
 
 .more-button {
   width: 399px;
-  margin-top: 30px;
   padding: 6px 0;
 }
 
 .search-form__label {
-  display: inline;
+  display: flex;
+  gap: 5px;
   width: fit-content;
 }
 
@@ -228,6 +229,7 @@ fieldset {
 }
 
 .content__card-link {
+  display: block;
   color: #fff;
   text-decoration: none;
 }
@@ -239,12 +241,11 @@ fieldset {
   overflow: scroll;
 }
 
-.content__list-item:not(:nth-last-child(2)) {
+.content__list-item:not(:last-child) {
   margin-bottom: 30px;
 }
 
 .content__card-link:focus-visible {
-  display: block;
   border: 1px solid #fff;
   outline: none;
 }
@@ -253,11 +254,11 @@ fieldset {
   padding: 1px;
 }
 
-.content__list-item:active {
+.content__card-link:active {
   background-color: #545050;
 }
 
-.content__list-item:hover {
+.content__card-link:hover {
   text-decoration: underline;
   text-underline-offset: 6px;
 }
@@ -276,6 +277,10 @@ fieldset {
 }
 
 .content__video-card-title {
+  text-overflow: ellipsis; 
+  white-space: nowrap; 
+  overflow: hidden;
+  max-width: 200px;
   margin-bottom: 9px;
   font-family: "Oswald", sans-serif;
   font-size: 30px;
@@ -284,6 +289,10 @@ fieldset {
 }
 
 .content__video-card-description {
+  text-overflow: ellipsis; 
+  white-space: nowrap; 
+  overflow: hidden;
+  max-width: 200px;
   font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
   font-size: 18px;
@@ -297,6 +306,8 @@ fieldset {
 .content__video-card-thumbnail {
   width: 194px;
   height: 103px;
+  object-fit: cover;
+  object-position: 0;
 }
 
 .content__video-card-description-container {
