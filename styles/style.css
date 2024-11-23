@@ -190,6 +190,7 @@ fieldset {
 
 .search-form__label {
   display: flex;
+  align-items: center;
   gap: 5px;
   width: fit-content;
 }
@@ -236,13 +237,17 @@ fieldset {
 
 .content__list {
   position: relative;
-  width: 100%;
+  width: 399px;
   height: 298px;
   overflow: scroll;
 }
 
 .content__list-item:not(:last-child) {
   margin-bottom: 30px;
+}
+
+.content__card-link:focus {
+  outline: none;
 }
 
 .content__card-link:focus-visible {
@@ -254,13 +259,12 @@ fieldset {
   padding: 1px;
 }
 
-.content__card-link:active {
+.content__card-link_current:active {
   background-color: #545050;
 }
 
 .content__card-link:hover {
   text-decoration: underline;
-  text-underline-offset: 6px;
 }
 
 .search-form__fieldset-title {
