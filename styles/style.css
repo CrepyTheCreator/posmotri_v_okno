@@ -242,6 +242,11 @@ fieldset {
   overflow: scroll;
 }
 
+.content__list-item {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
 .content__list-item:not(:last-child) {
   margin-bottom: 30px;
 }
@@ -259,7 +264,11 @@ fieldset {
   padding: 1px;
 }
 
-.content__card-link_current:active {
+.content__card-link_current {
+  background-color: #545050;
+}
+
+.content__card-link:active {
   background-color: #545050;
 }
 
