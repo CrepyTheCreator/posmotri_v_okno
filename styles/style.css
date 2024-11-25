@@ -184,7 +184,7 @@ fieldset {
 }
 
 .more-button {
-  width: 399px;
+  width: 100%;
   padding: 6px 0;
 }
 
@@ -240,7 +240,6 @@ fieldset {
   width: 399px;
   height: 298px;
   overflow-y: scroll;
-  overflow-x: hidden;
 }
 
 .content__list-item {
@@ -294,7 +293,7 @@ fieldset {
   text-overflow: ellipsis; 
   white-space: nowrap; 
   overflow: hidden;
-  max-width: 200px;
+  max-width: 184px;
   margin-bottom: 9px;
   font-family: "Oswald", sans-serif;
   font-size: 30px;
